@@ -58,6 +58,29 @@ class DetailsScreen extends StatelessWidget {
                 ),
               ),
             ),
+            // 리스트 뷰 빌더 예시 복사
+            Expanded(
+              child: ListView.builder(
+                padding: const EdgeInsets.all(8),
+                itemCount: 15,
+                itemBuilder: (context, index) {
+                  return Card( // 카드 형태의 디자인 적용
+                    child: ListTile(
+                      leading: const Icon(Icons.notifications_active, color: Colors.blue),
+                      title: Text('[$index] Flutter 수업 안내'),
+                      subtitle: const Text('내일은 리스트뷰 심화 과정입니다.'),
+                      onTap: () {
+                        // 클릭 시 피드백 알림
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(content: Text('$index번 공지를 확인했습니다.')),
+                        );
+                      },
+                    ),
+                  );
+                },
+              ),
+            ),
+            //리스트 뷰 빌더 예시 복사
             Expanded(
               child: ListView(
                 children: List.generate(
