@@ -115,26 +115,24 @@ class DetailsScreen extends StatelessWidget {
 
             // 리스트뷰 복사4, 스크롤 방향을 가로 방향으로 변경하고,
             // 이미지를 이용해보기,
-            Expanded(
+            SizedBox(
+              height: 200,
               child: ListView.builder(
                 // 중요, 기본 나열 방식이 세로 방향이 기본값인데,
                 // 가로 방향 옵션으로 변경.
                 scrollDirection: Axis.horizontal,
-                padding: const EdgeInsets.all(8),
+                // padding: const EdgeInsets.all(8),
                 itemCount: 6,
                 itemBuilder: (context, index) {
                   // index : 0 ~ 부터 시작
                   int imageNumber = index + 1;
-                  return  Center(
-                    // child: FlutterLogo(size: 100)
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Image.asset(
-                        'assets/images/logo${imageNumber}.png',
-                        width: 200,
-                        height: 200,
-                        fit: BoxFit.contain,
-                      ),
+                  return  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Image.asset(
+                      'assets/images/logo${imageNumber}.png',
+                      width: 200,
+                      height: 200,
+                      fit: BoxFit.contain,
                     ),
                   );
                 },
