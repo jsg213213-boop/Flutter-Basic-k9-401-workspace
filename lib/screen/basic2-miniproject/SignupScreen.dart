@@ -178,6 +178,8 @@ class _SignupScreenState extends State<SignupScreen> {
 
               // [ElevatedButton] 제출 버튼
               ElevatedButton(
+                // onPressed: () => _showToast(context, "임시 토스트 확인용"),
+                // onPressed: () => _showAdvancedSnackBar(context, "임시 토스트 확인용2"),
                 onPressed: () => _showResultDialog(),
                 child: const Text('회원 가입'),
               ),
@@ -192,8 +194,8 @@ class _SignupScreenState extends State<SignupScreen> {
     // 다이얼로그 창 출력하는 기능 외부로 빼기.
     String food = '';
     if (_isKoreanSelected) food += '한식 ';
-    if (_isChineseSelected) food += '중식 ';
-    if (_isJapaneseSelected) food += '일식 ';
+    if (_isChineseSelected) food += ' 중식 ';
+    if (_isJapaneseSelected) food += ' 일식 ';
 
     // _showToast(context,
     //     '성별: ${_selectedGender ?? "선택 안됨"}\n선호 음식: ${food.isEmpty ? "선택 안됨" : food}');

@@ -51,6 +51,11 @@ class _LoginScreen2State extends State<LoginScreen2> {
               // 순서3, 화면에 컨트롤러 붙이기 작업
               // 2, 컨트롤러 적용하기.
               TextField(
+                // [핵심] 입력되는 텍스트를 가릴지 여부를 결정합니다.
+                  obscureText: true,
+                  // 가려지는 문자를 커스텀하고 싶을 때 사용합니다. (기본값은 '•')
+                  obscuringCharacter: '*',
+
                   controller: passwordController,
                   decoration: InputDecoration(labelText: '패스워드')
               ),
