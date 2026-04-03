@@ -19,6 +19,14 @@ class _PageViewScreenState extends State<PageViewScreen> {
     Colors.blue,
   ];
 
+  // 각 페이지의 이미지  목록
+  // 순서1,
+  final List<String> _images = [
+    'assets/images/logo1.png',
+    'assets/images/logo2.png',
+    'assets/images/logo3.png',
+  ];
+
   @override
   void dispose() {
     _controller.dispose(); // 메모리 누수 방지를 위해 dispose 호출
@@ -42,18 +50,34 @@ class _PageViewScreenState extends State<PageViewScreen> {
               itemCount: _colors.length,         // 총 페이지 수
               itemBuilder: (context, index) {
                 // 각 페이지 위젯 생성
-                return Container(
-                  color: _colors[index],
-                  child: Center(
-                    child: Text(
-                      '페이지 ${index + 1}',
-                      style: const TextStyle(
-                        fontSize: 32,
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
+                return Column(
+                  children: [
+                    Expanded(
+                      child: Container(
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage(_images[index]),
+                          fit: BoxFit.cover
+                        )
+                      ),
                       ),
                     ),
-                  ),
+                    // Expanded(
+                    //   child: Container(
+                    //     color: _colors[index],
+                    //     child: Center(
+                    //       child: Text(
+                    //         '페이지 ${index + 1}',
+                    //         style: const TextStyle(
+                    //           fontSize: 32,
+                    //           color: Colors.white,
+                    //           fontWeight: FontWeight.bold,
+                    //         ),
+                    //       ),
+                    //     ),
+                    //   ),
+                    // ),
+                  ],
                 );
               },
             ),
