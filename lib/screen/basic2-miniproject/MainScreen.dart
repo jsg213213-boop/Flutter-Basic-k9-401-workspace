@@ -41,6 +41,11 @@ class MainScreen extends StatelessWidget {
               onPressed: () => Navigator.pushNamed(context, '/viewPagerTest'),
               child: const Text('뷰페이져 연습'),
             ),
+            const SizedBox(height: 20),
+            OutlinedButton(
+              onPressed: () => Navigator.pushNamed(context, '/drawerNaviTest'),
+              child: const Text('아코디언, 드로워, 네비게이션 연습'),
+            ),
           ],
         ),
       ),

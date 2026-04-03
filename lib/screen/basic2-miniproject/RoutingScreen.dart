@@ -2,6 +2,7 @@ import 'package:busanit_401_k9_flutter_project/screen/basic2-miniproject/TabBarS
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'AccordionNavScreen.dart';
 import 'DetailsScreen.dart';
 import 'LoginScreen2.dart';
 import 'MainScreen.dart';
@@ -25,6 +26,8 @@ class RoutingScreen extends StatelessWidget {
         // 탭 메뉴 화면 추가.
         '/tabMenuTest': (context) => const TabBarScreen(),
         '/viewPagerTest': (context) => const PageViewScreen(),
+        '/drawerNaviTest': (context) => const AccordionNavScreen(),
+
       },
     );
   }
