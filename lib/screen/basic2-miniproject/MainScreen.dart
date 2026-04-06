@@ -66,6 +66,16 @@ class MainScreen extends StatelessWidget {
               onPressed: () => Navigator.pushNamed(context, '/publicDataTest'),
               child: const Text('publicDataTest 지진정보 공공데이터 연동 테스트 '),
             ),
+            const SizedBox(height: 20),
+            OutlinedButton(
+              onPressed: () => Navigator.pushNamed(context, '/providerTest'),
+              child: const Text('provider 테스트 1'),
+            ),
+            const SizedBox(height: 20),
+            OutlinedButton(
+              onPressed: () => Navigator.pushNamed(context, '/providerTestPdTest'),
+              child: const Text('provider 테스트 2, 공공데이터 음식'),
+            ),
 
           ],
         ),

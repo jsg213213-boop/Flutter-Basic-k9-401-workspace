@@ -37,6 +37,8 @@ dependencies:
   #추가
   http: ^1.1.0        # REST API 호출
   dio: ^5.3.3         # 고급 HTTP 클라이언트 (선택)
+  #추가
+  provider: ^6.1.2   # Provider 패키지
 
 dev_dependencies:
   flutter_test:

@@ -2,6 +2,8 @@ import 'package:busanit_401_k9_flutter_project/screen/basic2-miniproject/TabBarS
 import 'package:busanit_401_k9_flutter_project/screen/basic3-http/_1_dummyJson/screens/dummy_user_detail_screen.dart';
 import 'package:busanit_401_k9_flutter_project/screen/basic3-http/_3_news_api/screens/news_screen.dart';
 import 'package:busanit_401_k9_flutter_project/screen/basic3-http/_4_public_data_1_earthquake/screens/PublicDataScreen.dart';
+import 'package:busanit_401_k9_flutter_project/screen/basic4-provider/screens/CounterScreen.dart';
+import 'package:busanit_401_k9_flutter_project/screen/basic5-provider-pdData/_1_FoodData/screens/my_pd_test_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -17,6 +19,7 @@ import 'ViewPagerScreen.dart';
 
 class RoutingScreen extends StatelessWidget {
   const RoutingScreen({super.key});
+
 
   @override
   Widget build(BuildContext context) {
@@ -39,6 +42,8 @@ class RoutingScreen extends StatelessWidget {
         // '/dummyDetailScreen': (context) => const DummyUserDetailScreen(user: user),
         '/newsTest': (context) => const NewsScreen(),
         '/publicDataTest': (context) => const PublicDataScreen(),
+        '/providerTest': (context) => const CounterScreen(),
+        '/providerTestPdTest': (context) => const MyPdTestScreen(),
 
       },
     );
